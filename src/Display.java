@@ -91,9 +91,6 @@ public class Display {
     static String light = "A make-shift light source containing a battery, a light bulb, a copper cable, some tape and hope!";
 
 
-
-
-
     public static void narrative(String phrase){
         System.out.println(phrase);
     }

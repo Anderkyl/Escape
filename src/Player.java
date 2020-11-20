@@ -1,5 +1,3 @@
-import com.sun.deploy.security.SelectableSecurityManager;
-
 import java.util.Scanner;
 
 public class Player {
@@ -36,7 +34,7 @@ public class Player {
                 System.out.println("7 - Battery Powered Light Bulb");
             }
             System.out.println("0 - Go Back");
-            System.out.println("\n*********************************");
+            System.out.println("***********************************\n");
             int choice = read.nextInt();
 
             if(choice == 1){
@@ -120,16 +118,17 @@ public class Player {
         int choice = read.nextInt();
 
         if(lightAssembly2 && lightAssembly3 && choice == 1){
-            Display.narrative(Display.cableN1);
+            Display.narrative(Display.cableN4);
             lightAssembly1 = true;
         }else if(electrical_tape && choice == 1){
-            Display.narrative(Display.cableN2);
+            Display.narrative(Display.cableN1);
             lightAssembly1 = true;
         }else if(lightAssembly3 && choice == 2 && lightAssembly1){
-            Display.narrative(Display.cableN3);
+            Display.narrative(Display.cableN2);
             lightAssembly2 = true;
         }else if(electrical_tape && choice == 2){
-            Display.narrative(Display.cableN4);
+            Display.narrative(Display.cableN3);
+
             lightAssembly2 = true;
         }else if((choice == 1 && !battery) || (choice == 2 && !light_bulb)){
             Display.narrative(Display.cableN5);

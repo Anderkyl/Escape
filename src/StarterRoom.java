@@ -76,21 +76,23 @@ public class StarterRoom {
         if(pullBed) {
             Display.narrative(Display.bookcaseBedPull);
             escape = true;
-        }else if(tookCompass){
-            Display.narrative(Display.bookcaseNoCompass);
-            Display.choices(Display.bookcaseC1);
         }else{
-            Display.narrative(Display.bookcaseN);
-            Display.choices(Display.bookcaseC2);
-        }
-        int choice = read.nextInt();
+            if(tookCompass){
+                Display.narrative(Display.bookcaseNoCompass);
+                Display.choices(Display.bookcaseC1);
+            }else{
+                Display.narrative(Display.bookcaseN);
+                Display.choices(Display.bookcaseC2);
+            }
+            int choice = read.nextInt();
 
-        if(choice == 1){
-            inspectBook();
-        }else{
-            player.setCompass(true);
-            tookCompass = true;
-            Display.narrative(Display.compassN);
+            if(choice == 1){
+                inspectBook();
+            }else{
+                player.setCompass(true);
+                tookCompass = true;
+                Display.narrative(Display.compassN);
+            }
         }
     }
 
