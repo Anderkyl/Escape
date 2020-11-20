@@ -70,7 +70,7 @@ public class Room {
     }
 
     public int inspectBooks(){
-        System.out.println("The two books on the shelf are both bound in hard leather covers. The titles are etched in gold on the side.");
+        System.out.println("  The two books on the shelf are both bound in hard leather covers. The titles are etched in gold on the side.");
         System.out.println("1 - Inspect \"Ben's Kites: Modern Discoveries\" \n2 - Inspect \"Edison Contraptions\"");
 
         int choice = read.nextInt();
